@@ -1,0 +1,45 @@
+﻿<Window x:Class="TranslatorProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TranslatorProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="729*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="215*"/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.RowSpan="2" Grid.ColumnSpan="4">
+            <Button x:Name="LoadSTLButton" Content="Load STL file" Margin="87,58,504,320" Click="LoadSTLButton_Click" FontSize="22"/>
+        </Border>
+
+        <TextBlock x:Name="LoadStatusTextBlock" HorizontalAlignment="Left" Margin="299,57,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="53" Width="344" Background="#FFF1EFAC" Grid.Column="3"/>
+        <Button x:Name="TranslateOBJButton" Content="OBJ Translator" HorizontalAlignment="Left" Margin="17,140,0,0" Grid.Row="1" VerticalAlignment="Top" Width="207" Height="52" RenderTransformOrigin="0.5,0.5" FontSize="22" Click="TranslateOBJButton_Click" Grid.Column="3">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.374"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.699"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBlock x:Name="TranslateStatusTextBlock" HorizontalAlignment="Left" Margin="299,140,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock2" VerticalAlignment="Top" Height="53" Width="344" Background="#FFF1E66D" Grid.Column="3"/>
+
+
+
+
+
+
+
+
+    </Grid>
+</Window>
